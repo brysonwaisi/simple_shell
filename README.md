@@ -65,4 +65,5 @@ $ hello world
 $ exit
 ```
 
-## Credits
+## Authors 
+Bryson Nyamwange [AlexYu01](https://github.com/brysonwaisi)
