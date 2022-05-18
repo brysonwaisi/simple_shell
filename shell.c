@@ -103,7 +103,6 @@ char *get_input(void)
 
 	/* replace tabs with spaces */
 	str_rep(buffer, '\t', ' ');
-	
 	return (_strlen(buffer) == 1 ? buffer : _strtok(buffer, "\n"));
 }
 
@@ -206,7 +205,8 @@ int execute(char **input_array, char *command, char *shell_name)
 	return (0);
 }
 
-/** error_message_init - initialize error_message array with given values
+/**
+ * error_message_init - initialize error_message array with given values
  * @error_message: error message array
  * @shell_name: 1st value
  * @command: 2nd value
