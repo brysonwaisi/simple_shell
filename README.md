@@ -66,4 +66,4 @@ $ exit
 ```
 
 ## Authors 
-Bryson Nyamwange [(https://github.com/brysonwaisi)]
+Bryson Nyamwange <[brysonwaisi](https://github.com/brysonwaisi)>
