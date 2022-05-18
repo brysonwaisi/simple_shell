@@ -32,15 +32,15 @@ int main(int ac, char **av, char **env)
 
 	(void)ac;
 
-OAOAOA	free_list(env_list);
-
-OAOAOA	return (0);
+	free_list(env_list);
+	
+	return (0);
 }
 
 /**
  * sig_handler - handles SIGINT
  * @sig: SIGINT
-OAOAOA */
+ */
 void sig_handler(int sig)
 {
 	signal(sig, sig_handler);
