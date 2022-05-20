@@ -24,7 +24,7 @@ int shell(list_t *env_list, char *shell_name)
 			return (0);
 
 		input_list = split_string(input, " "); /* check input */
-		if (input_list == NULL || input[0] == '\n')
+		if (input_list == NULL)
 		{
 			free(input);
 			continue;
@@ -101,9 +101,10 @@ char *get_input(void)
 		return (NULL);
 	}
 
-	/* replace tabs with spaces */
-	str_rep(buffer, '\t', ' ');
-	return (_strlen(buffer) == 1 ? buffer : _strtok(buffer, "\n"));
+	/* replace non-printable characters with space with spaces */
+	str_rep(buffer);
+
+	return (buffer);
 }
 
 /**
@@ -205,8 +206,7 @@ int execute(char **input_array, char *command, char *shell_name)
 	return (0);
 }
 
-/**
- * error_message_init - initialize error_message array with given values
+/** error_message_init - initialize error_message array with given values
  * @error_message: error message array
  * @shell_name: 1st value
  * @command: 2nd value
